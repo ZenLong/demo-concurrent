@@ -9,6 +9,8 @@ import java.util.concurrent.Semaphore;
 
 /**
  * 以信号量Semaphore控制并发的线程数
+ *
+ * @author KelvinZ
  */
 public class SemaphoreJob implements Runnable {
     private static Logger log = LoggerFactory.getLogger(DemoConcurrentApplication.class);
@@ -19,7 +21,7 @@ public class SemaphoreJob implements Runnable {
     @Override
     public void run() {
         try {
-            log.info("Job {} waiting... {} available", jobId, semaphore.availablePermits(), semaphore.getQueueLength());
+            log.info("Job {} waiting... {} available", jobId, semaphore.availablePermits());
             semaphore.acquire(1);
             log.info("Job {} start... {} queued", jobId, semaphore.getQueueLength());
             Thread.sleep(5000);

@@ -5,7 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
+/**
+ * @author KelvinZ
+ */
 @SpringBootApplication
 public class DemoConcurrentApplication {
     private static Logger log = LoggerFactory.getLogger(DemoConcurrentApplication.class);
